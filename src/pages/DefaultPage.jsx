@@ -32,7 +32,7 @@ export default function DefaultPage(props) {
     const newCities = {};
     Promise.all(
       cityArr.map(city =>
-        fetch(`http://api.weatherapi.com/v1/current.json?key=${key}&q=id:${city}&aqi=yes`)
+        fetch(`https://api.weatherapi.com/v1/current.json?key=${key}&q=id:${city}&aqi=yes`)
           .then(res => res.json())
           .then(data => {
             newCities[city] = data
